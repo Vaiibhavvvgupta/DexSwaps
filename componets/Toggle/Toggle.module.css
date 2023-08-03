@@ -1,0 +1,89 @@
+/* Toggle.module.css */
+
+/* Center the content within the .Toggle element */
+.Toggle {
+    text-align: center;
+  }
+  
+  /* Style the container of the toggle switch */
+  .Toggle_switch_box {
+    position: relative;
+    width: 75px;
+    display: inline-block;
+    text-align: left;
+    top: 8px;
+  }
+  
+  /* Hide the actual checkbox input */
+  .Toggle_checkbox {
+    display: none;
+  }
+  
+  /* Style the label for the toggle */
+  .Toggle_label {
+    display: block;
+    overflow: hidden;
+    cursor: pointer;
+    border: 0px solid #bbb;
+    border-radius: 20px;
+  }
+  
+  /* Style the inner part of the toggle switch (the sliding part) */
+  .Toggle_inner {
+    display: block;
+    width: 20%;
+    margin-left: -100%;
+  }
+  
+  /* Style the "Yes" and "No" labels on the inner part of the toggle */
+  .Toggle_inner:before,
+  .Toggle_inner:after {
+    float: left;
+    width: 50%;
+    height: 36%;
+    padding: 0;
+    line-height: 36px;
+    color: #bbb;
+    font-weight: bold;
+    box-sizing: border-box;
+  }
+  
+  /* Style the "Yes" label */
+  .Toggle_inner:before {
+    content: "Yes";
+    padding-left: 10px;
+    background-color: #cff80b;
+    color: #1e1e1e;
+  }
+  
+  /* Style the "No" label */
+  .Toggle_inner:after {
+    content: "NO";
+    padding-right: 10px;
+    background-color: #cff80b;
+    color: #1e1e1e;
+  }
+  
+  /* Style the toggle switch button */
+  .Toggle_switch {
+    display: block;
+    width: 24px;
+    margin: 5px;
+    background-color: rgba(226, 0, 0, 0.953);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 40px;
+    border: 0 solid #bbb;
+    border-radius: 20px;
+  }
+  
+  /* Handle the animation for when the checkbox is checked */
+  .Toggle_checkbox:checked + .Toggle_label .Toggle_inner {
+    margin-left: 0;
+  }
+  
+  .Toggle_checkbox:checked + .Toggle_label .Toggle_switch {
+    right: 0;
+  }
+  
